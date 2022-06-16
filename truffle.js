@@ -1,14 +1,15 @@
 var HDWalletProvider = require("truffle-hdwallet-provider");
-var mnemonic = "holiday retreat ten filter term awake system fortune under paddle inch canoe";
+var mnemonic = "offer write sand beyond wolf case country idle since wool deposit wise";
 
 module.exports = {
   networks: {
     development: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, "http://192.168.1.118:8545/", 0, 50);
+        return new HDWalletProvider(mnemonic, "http://localhost:8545/", 0, 50);
       },
       network_id: '*',
-      gas: 9999999
+      gasPrice: 10000000, 
+      gasLimit: 3141592000000   
     },
     rinkeby: {
       provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
